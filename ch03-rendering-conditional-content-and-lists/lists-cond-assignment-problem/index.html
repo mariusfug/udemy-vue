@@ -25,11 +25,12 @@
       <ul v-for="task in tasks" :key="task" :class="listClasses">
         <!-- 2) Output the list of tasks here -->
         <li> {{ task }} </li>
-        <p> {{listClasses}} </p>
       </ul>
       <!-- 3) When the below button is pressed, the list should be shown or hidden -->
       <!-- BONUS: Also update the button caption -->
-      <button @click="toggleShowList">Hide / Show List</button>
+      <button @click="toggleShowList">
+        {{ showList === true ? 'Hide' : 'Show' }} List
+      </button>
 
     </section>
   </body>
